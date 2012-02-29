@@ -1,0 +1,55 @@
+<HTML>
+	<HEAD>
+	</HEAD>
+	<BODY>
+	<SCRIPT>
+		var alive = 1;
+
+		var death = function(x) {     
+				for (i = 0; i < x; i++ ) {
+					document.write("You got face slap! ");
+				}
+			window.setTimeout(alert("you died " + x + " times"), 2500);
+		alive -= 1;
+		};
+
+		document.writeln("Welcome, bizotch!\n");
+		alert("Prepare for combat!!");
+		var choice = prompt("Choose a mystery weapon: 1, 2, 3, 4, 5\n");
+		switch (choice) {
+		case "1":
+			document.writeln("You survive the encounter using a flagpole, and win a dog! Congrats.");
+			break;
+		case "2":
+			document.writeln("You whip out a teddy bear...");
+			death(10);
+			break;
+		case "3":
+			document.writeln("3 is the magic number. Unfortunately you don't know any magic. You try to cast a spell and turn yourself into a gnat.");
+			death(1);
+				break;
+		case "4":
+			alert("ONLY COWARDS CHOOSE 4!!!");
+			death(999);
+				break;
+		case "5":
+			document.writeln("You pull out a notepad, and bludgeon your assailant to death. Strong work.")
+				break;
+		default:
+			alert("FAIL!");
+					death(2);
+		}
+
+		if(alive === 1){
+			window.setTimeout(alert("win"), 1000);
+		}
+		else
+		{
+			setTimeout(alert("fail"), 1000);
+		}
+
+	</SCRIPT>
+	
+	</BODY>
+
+</HTML>
